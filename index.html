@@ -1,112 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustVCare – NRI Family Support Services</title>
-<meta name="description" content="Trust Care offers NRI family support services including home visits, groceries, hospital assistance, and 24/7 emergency help for families in Tamilnadu. Choose from Basic, Family, or Premium Plans.">
-<style>
-  body {font-family: Arial, sans-serif; margin:0; background: #f4f6f8;}
-  header {background:#0a6aa1; color:white; padding:50px 20px; text-align:center;}
-  header h1 {margin:0; font-size: 2.5em;}
-  header h3 {margin:5px 0;}
-  header p {font-size: 1.2em;}
-  
-  section {padding:50px 20px; max-width:1000px; margin:auto;}
-  h2 {color:#0a6aa1; margin-bottom:20px;}
-  
-  .plans {display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px;}
-  .plan {background:white; flex:1 1 300px; padding:30px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-  .plan h3 {margin-top:0; color:#0a6aa1;}
-  .plan ul {padding-left:20px;}
-  .plan .price {font-size:1.5em; font-weight:bold; margin:10px 0;}
-  .plan .button {display:inline-block; padding:10px 20px; background:#0a6aa1; color:white; border-radius:5px; text-decoration:none; margin-top:10px;}
-  .plan .button:hover {background:#084d70;}
-  
-  footer {background:#222; color:white; text-align:center; padding:30px 20px;}
-  
-  @media(max-width:768px){
-    .plans {flex-direction:column;}
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust V Care - NRI Family Support Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #0073e6;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffd700;
+    }
+
+    header {
+      background-color: #005bb5;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .plan {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .plan h2 {
+      margin-top: 0;
+      color: #0073e6;
+    }
+    .plan p.price {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .addon {
+      background-color: #e0f0ff;
+      padding: 1rem;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
 
+<!-- Navigation -->
+<nav>
+  <a href="#basic">Basic Plan</a>
+  <a href="#family">Family Care Plan</a>
+  <a href="#premium">Premium Plan</a>
+  <a href="#addon">Add-On Services</a>
+</nav>
+
 <header>
   <h1>Trust V Care</h1>
-  <h3>NRI Family Support Services</h3>
-  <p>Caring for your loved ones while you live abroad</p>
+  <p>NRI Family Support Services</p>
 </header>
 
-<section id="about">
-  <h2>About Us</h2>
-  <p>Trust Care supports NRI families by helping take care of parents, homes, and important tasks in India. We provide regular visits, grocery & medicine support, hospital assistance, transport, and 24/7 emergency help — acting as your trusted local support system.</p>
-</section>
-
-<section id="plans">
-  <h2>Our Plans</h2>
-  <p>Under our plans, choose the option that suits your family needs:</p>
-  <div class="plans">
-    
-    <div class="plan">
-      <h3>Basic Plan</h3>
-      <p class="price">₹5,000 / Month</p>
-      <ul>
-        <li>Monthly parent and property visit</li>
-        <li>Utility bill assistance</li>
-        <li>Monthly groceries and medicines</li>
-      </ul>
-      <a href="mailto:info@trustcare.com" class="button">Choose Plan</a>
-    </div>
-
-    <div class="plan">
-      <h3>Family Care Plan</h3>
-      <p class="price">₹15,000 / Month</p>
-      <ul>
-        <li>Weekly parent & property visits</li>
-        <li>Weekly groceries and medicines</li>
-        <li>Hospital appointment assistance</li>
-        <li>Transport for hospital, temple, shopping, relatives</li>
-      </ul>
-      <a href="mailto:info@trustcare.com" class="button">Choose Plan</a>
-    </div>
-
-    <div class="plan">
-      <h3>Premium Plan</h3>
-      <p class="price">₹30,000 / Month</p>
-      <ul>
-        <li>All Family Care Plan services</li>
-        <li>Visa/passport appointment help</li>
-        <li>Property maintenance</li>
-        <li>Transport/driver arrangement</li>
-        <li>24/7 emergency support</li>
-      </ul>
-      <a href="mailto:info@trustcare.com" class="button">Choose Plan</a>
-    </div>
-
+<div class="container">
+  <!-- Basic Plan -->
+  <div class="plan" id="basic">
+    <h2>Basic Plan</h2>
+    <p class="price">5000 INR / Month</p>
+    <ul>
+      <li>Monthly parent, home, property visits care, safety and condition check</li>
+      <li>Assistance with paying utility bills</li>
+      <li>Monthly grocery and medicine purchase</li>
+    </ul>
   </div>
-</section>
 
-<section id="extra">
-  <h2>Extra Add-On Services</h2>
-  <ul>
-    <li>Airport pickup and drop</li>
-    <li>Wedding or event assistance</li>
-    <li>Courier packages abroad</li>
-    <li>House cleaning before visits</li>
-    <li>Government or bank assistance</li>
-  </ul>
-</section>
+  <!-- Family Care Plan -->
+  <div class="plan" id="family">
+    <h2>Family Care Plan</h2>
+    <p class="price">15000 INR / Month</p>
+    <ul>
+      <li>Weekly parent, home and property visit care, safety and condition check</li>
+      <li>Weekly grocery and medicine purchase</li>
+      <li>Assistance with hospital appointments</li>
+      <li>Transport and assistance for hospital, temple visits, shopping, or visiting relatives (1st–4th week)</li>
+    </ul>
+  </div>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: +91 8098418485</p>
-  <p>Email: <a href="mailto:info@trustcare.com">info@trustcare.com</a></p>
-  <a href="mailto:info@trustcare.com" class="button">Email Us</a>
-</section>
+  <!-- Premium Plan -->
+  <div class="plan" id="premium">
+    <h2>Premium Plan</h2>
+    <p class="price">30000 INR / Month</p>
+    <ul>
+      <li>Weekly parent, home and property visit care, safety and condition check</li>
+      <li>Weekly grocery and medicine purchase</li>
+      <li>Assistance with hospital appointments</li>
+      <li>Transport and assistance for hospital, temple visits, shopping, or visiting relatives (1st–4th week)</li>
+      <li>Visa or passport booking appointment/interview time assistance</li>
+      <li>Arranging repairs and maintenance of property</li>
+      <li>Arrange acting driver, cab, or transport assistance</li>
+      <li>Emergency support 24/7</li>
+    </ul>
+  </div>
+
+  <!-- Extra Add-On Services -->
+  <div class="addon" id="addon">
+    <h2>Extra Add-On Services</h2>
+    <ul>
+      <li>Airport pickup and drop</li>
+      <li>Wedding or event assistance</li>
+      <li>Courier packages abroad</li>
+      <li>House cleaning before NRI visits</li>
+      <li>Government or bank work assistance</li>
+    </ul>
+    <p><em>Charges applied at point of time.</em></p>
+  </div>
+</div>
 
 <footer>
-  <p>Trust Care – NRI Family Support Services | &copy; 2026</p>
+  &copy; 2026 Trust V Care - NRI Family Support Services
 </footer>
 
 </body>
