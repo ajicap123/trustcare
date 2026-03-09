@@ -71,7 +71,7 @@
   .tab-content h2 {
     color: #0073e6;
   }
-  .tab-content p, .tab-content ul {
+  .tab-content p, .tab-content ul, .tab-content ol {
     margin: 0.5rem 0;
     line-height: 1.5;
   }
@@ -105,6 +105,7 @@
   <a onclick="showTab('plans', this)">Care Plans</a>
   <a onclick="showTab('additional', this)">Additional Services</a>
   <a onclick="showTab('safety', this)">Safety & Trust</a>
+  <a onclick="showTab('contact', this)">Contact Us</a>
 </nav>
 
 <div class="container">
@@ -182,7 +183,6 @@
   <!-- Safety & Trust -->
   <div class="tab-content" id="safety">
     <h2>Safety & Trust</h2>
-    <p>What measures are taken to ensure the safety of my elderly loved ones?</p>
     <p>At Trust V Care, your loved ones’ safety is our top priority:</p>
     <ul>
       <li>Every team member undergoes strict background checks, including identity verification, criminal record screening, and reference verification.</li>
@@ -193,19 +193,8 @@
       <li>Immediate alerts are sent to families if any concerns arise, ensuring 24/7 peace of mind.</li>
     </ul>
   </div>
-  <nav>
-  <a onclick="showTab('about', this)">Peace of Mind</a>
-  <a onclick="showTab('how', this)">How It Works</a>
-  <a onclick="showTab('plans', this)">Care Plans</a>
-  <a onclick="showTab('additional', this)">Additional Services</a>
-  <a onclick="showTab('safety', this)">Safety & Trust</a>
-  <a onclick="showTab('contact', this)">Contact Us</a> <!-- new tab -->
-</nav>
 
-<div class="container">
-  <!-- Existing tab contents ... -->
-
-  <!-- Contact Us Tab -->
+  <!-- Contact Us -->
   <div class="tab-content" id="contact">
     <h2>Contact Us</h2>
     <p><strong>Office Address:</strong><br>
@@ -215,7 +204,6 @@
     <p><strong>Email:</strong><br>
       <a href="mailto:info@trustvcare.com">info@trustvcare.com</a></p>
   </div>
-</div>
 </div>
 
 <footer>
@@ -237,7 +225,7 @@
     element.classList.add('active');
   }
 
-  // Show first tab by default
+  // Show first tab (Peace of Mind) by default
   document.addEventListener('DOMContentLoaded', () => {
     showTab('about', document.querySelector('nav a'));
   });
