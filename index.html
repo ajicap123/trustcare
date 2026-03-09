@@ -23,6 +23,7 @@
     display: flex;
     justify-content: center;
     z-index: 1000;
+    flex-wrap: wrap;
   }
   nav a {
     color: white;
@@ -31,9 +32,11 @@
     font-weight: bold;
     transition: color 0.3s;
     cursor: pointer;
+    padding: 0.3rem 0.5rem;
   }
   nav a.active {
     color: #ffd700;
+    border-bottom: 2px solid #ffd700;
   }
 
   header {
@@ -99,6 +102,7 @@
 
 <!-- Navigation -->
 <nav>
+  <a onclick="showPlan('about', this)">About Us</a>
   <a onclick="showPlan('basic', this)">Basic Plan</a>
   <a onclick="showPlan('family', this)">Family Care Plan</a>
   <a onclick="showPlan('premium', this)">Premium Plan</a>
@@ -106,6 +110,13 @@
 </nav>
 
 <div class="container">
+  <!-- About Us -->
+  <div class="plan" id="about">
+    <h2>Our Purpose & Goal</h2>
+    <p><strong>Purpose:</strong> At <strong>Trust V Care</strong>, we help NRIs ensure the well-being of their families back home, providing professional assistance in daily life, healthcare, property management, and more.</p>
+    <p><strong>Goal:</strong> Our goal is to give NRIs peace of mind by offering personalized care plans that guarantee safety, comfort, and convenience for their loved ones, acting as a trusted bridge between you and your family.</p>
+  </div>
+
   <!-- Basic Plan -->
   <div class="plan" id="basic">
     <h2>Basic Plan</h2>
@@ -178,9 +189,9 @@
     element.classList.add('active');
   }
 
-  // Show Basic Plan by default
+  // Show About Us tab by default
   document.addEventListener('DOMContentLoaded', () => {
-    showPlan('basic', document.querySelector('nav a'));
+    showPlan('about', document.querySelector('nav a'));
   });
 </script>
 
