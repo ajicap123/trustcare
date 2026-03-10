@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustCare Global</title>
+<title>TrustCare Global – Family & Property Support</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -28,6 +28,18 @@
   header p {
     margin-top: 0.5rem;
     font-size: 1.1rem;
+  }
+
+  /* Blinking highlight for brand name */
+  .blink-highlight {
+    color: #ffd700; /* gold highlight */
+    font-weight: bold;
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
   }
 
   /* Navbar / Tabs */
@@ -94,7 +106,7 @@
 <body>
 
 <header>
-  <h1>Trust V Care – Global Family & Property Support</h1>
+  <h1><span class="blink-highlight">TrustCare Global</span> – Family & Property Support</h1>
   <p>Caring for your loved ones and property in Kerala and Tamil Nadu, even when you are far away.</p>
 </header>
 
@@ -113,15 +125,15 @@
   <div class="tab-content" id="about">
     <h2>Peace of Mind for Families Abroad</h2>
     <p>You care deeply about your parents and loved ones. But distance can make it difficult to support them with everyday needs.</p>
-    <p>Trust V Care bridges that gap. We provide reliable family and property support services in Kerala and Tamil Nadu, coordinated by you and delivered by our trusted local team.</p>
+    <p>TrustCare Global bridges that gap. We provide reliable family and property support services in Kerala and Tamil Nadu, coordinated by you and delivered by our trusted local team.</p>
     <p>Our services empower older parents to live more independently by assisting with daily tasks, errands, and appointments—reducing their reliance on neighbours or friends for basic support.</p>
-    <p>For families living abroad, Trust V Care offers true peace of mind. You have a dependable team on the ground—ready to support your loved ones with care, respect, and reliability whenever it’s needed.</p>
+    <p>For families living abroad, TrustCare Global offers true peace of mind. You have a dependable team on the ground—ready to support your loved ones with care, respect, and reliability whenever it’s needed.</p>
   </div>
 
   <!-- How It Works -->
   <div class="tab-content" id="how">
     <h2>What We Do & How It Works</h2>
-    <p>Trust V Care provides dependable support for elderly parents, homes, and everyday responsibilities in Kerala and Tamil Nadu for families living abroad. Our goal is to ensure your loved ones receive the care and assistance they need while giving you complete peace of mind.</p>
+    <p>TrustCare Global provides dependable support for elderly parents, homes, and everyday responsibilities in Kerala and Tamil Nadu for families living abroad. Our goal is to ensure your loved ones receive the care and assistance they need while giving you complete peace of mind.</p>
     <ol>
       <li><strong>Choose a Plan:</strong> Select a service plan that fits your family’s needs—Silver, Gold, or Platinum.</li>
       <li><strong>Personalized Setup:</strong> Our team connects with you to understand your parents’ needs and home requirements, then creates a personalized support plan.</li>
@@ -183,7 +195,7 @@
   <!-- Safety & Trust -->
   <div class="tab-content" id="safety">
     <h2>Safety & Trust</h2>
-    <p>At Trust V Care, your loved ones’ safety is our top priority:</p>
+    <p>At TrustCare Global, your loved ones’ safety is our top priority:</p>
     <ul>
       <li>Every team member undergoes strict background checks, including identity verification, criminal record screening, and reference verification.</li>
       <li>Service executives are trained professionals selected for reliability, empathy, and integrity.</li>
@@ -202,30 +214,27 @@
     <p><strong>Phone / WhatsApp:</strong><br>
       <a href="tel:+918072728749">+91 8072 728 749</a></p>
     <p><strong>Email:</strong><br>
-      <a href="mailto:info@trustvcare.com">info@trustvcare.com</a></p>
+      <a href="mailto:info@trustcareglobal.com">info@trustcareglobal.com</a></p>
   </div>
 </div>
 
 <footer>
-  &copy; 2026 Trust V Care - Global Family & Property Support
+  &copy; 2026 TrustCare Global - Family & Property Support
 </footer>
 
 <script>
   function showTab(tabId, element) {
-    // Hide all tabs
     const tabs = document.querySelectorAll('.tab-content');
     tabs.forEach(tab => tab.style.display = 'none');
 
-    // Remove active class from all nav links
     const links = document.querySelectorAll('nav a');
     links.forEach(link => link.classList.remove('active'));
 
-    // Show selected tab
     document.getElementById(tabId).style.display = 'block';
     element.classList.add('active');
   }
 
-  // Show first tab (Peace of Mind) by default
+  // Show first tab by default
   document.addEventListener('DOMContentLoaded', () => {
     showTab('about', document.querySelector('nav a'));
   });
