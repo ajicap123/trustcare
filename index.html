@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,8 +103,6 @@ margin:auto;
 padding:50px 20px;
 }
 
-/* SECTION */
-
 h2{
 text-align:center;
 margin-bottom:30px;
@@ -174,6 +173,63 @@ padding:20px;
 border-radius:10px;
 }
 
+/* MAP */
+
+.coverage{
+background:#eef3ff;
+padding:60px 20px;
+}
+
+.map{
+max-width:1000px;
+margin:auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* BOOKING FORM */
+
+.booking{
+padding:60px 20px;
+background:white;
+}
+
+.form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.form input,
+.form select,
+.form textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+.form textarea{
+height:100px;
+}
+
+.form button{
+background:#007bff;
+color:white;
+border:none;
+padding:14px;
+border-radius:6px;
+font-size:16px;
+cursor:pointer;
+}
+
+.form button:hover{
+background:#004aad;
+}
+
 /* CONTACT */
 
 .contact{
@@ -196,15 +252,22 @@ padding:20px;
 
 .whatsapp{
 position:fixed;
-bottom:20px;
-right:20px;
+bottom:25px;
+right:25px;
 background:#25D366;
 color:white;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:40px;
 text-decoration:none;
 font-weight:600;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+box-shadow:0 4px 15px rgba(0,0,0,0.3);
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.05)}
+100%{transform:scale(1)}
 }
 
 </style>
@@ -213,51 +276,37 @@ box-shadow:0 4px 10px rgba(0,0,0,0.3);
 <body>
 
 <header>
-
 <div class="logo">TrustCare Global</div>
 <p>Caring for your loved ones and property in Kerala & Tamil Nadu</p>
-
 </header>
 
-
 <section class="hero">
-
 <img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
-
 <div class="hero-text">
 <h1>Peace of Mind for Families Abroad</h1>
 <p>Reliable support for elderly parents, homes, and daily responsibilities.</p>
 </div>
-
 </section>
 
-
 <nav>
-
 <a href="#about">About</a>
 <a href="#plans">Care Plans</a>
-<a href="#services">Services</a>
 <a href="#trust">Why Trust Us</a>
 <a href="#testimonials">Testimonials</a>
+<a href="#coverage">Coverage</a>
+<a href="#booking">Request Service</a>
 <a href="#contact">Contact</a>
-
 </nav>
 
-
 <div class="container" id="about">
-
 <h2>Peace of Mind for Families Abroad</h2>
-
 <p>
 TrustCare Global bridges the gap for families living abroad by providing reliable support services for elderly parents and property in Kerala and Tamil Nadu.
 </p>
-
 <p>
-Our trusted local team assists with everyday needs such as groceries, hospital visits, bill payments, property inspections, and more.
+Our trusted local team assists with everyday needs such as groceries, hospital visits, bill payments, and property inspections.
 </p>
-
 </div>
-
 
 <div class="container" id="plans">
 
@@ -266,13 +315,9 @@ Our trusted local team assists with everyday needs such as groceries, hospital v
 <div class="cards">
 
 <div class="card">
-
 <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-
 <h3>Silver Plan</h3>
-
 <div class="price">₹5,000 / Month</div>
-
 <ul>
 <li>Monthly visit to parents and home</li>
 <li>Property inspection</li>
@@ -280,18 +325,12 @@ Our trusted local team assists with everyday needs such as groceries, hospital v
 <li>Monthly groceries & medicine</li>
 <li>Photo report to family</li>
 </ul>
-
 </div>
 
-
 <div class="card highlight">
-
 <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
-
 <h3>Gold Plan</h3>
-
 <div class="price">₹20,000 / Month</div>
-
 <ul>
 <li>Weekly visit to parents and home</li>
 <li>Property inspection</li>
@@ -301,18 +340,12 @@ Our trusted local team assists with everyday needs such as groceries, hospital v
 <li>4 transport services per month</li>
 <li>Weekly service updates</li>
 </ul>
-
 </div>
 
-
 <div class="card">
-
 <img src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c">
-
 <h3>Platinum Plan</h3>
-
 <div class="price">₹40,000 / Month</div>
-
 <ul>
 <li>Weekly visit to parents and home</li>
 <li>Property inspection</li>
@@ -326,90 +359,86 @@ Our trusted local team assists with everyday needs such as groceries, hospital v
 <li>4 transport services per month</li>
 <li>Weekly service updates</li>
 </ul>
-
 </div>
 
 </div>
-
 </div>
 
-
-<div class="trust" id="trust">
-
+<section class="trust" id="trust">
 <h2>Why Families Trust Us</h2>
-
 <div class="container cards">
-
 <div class="card">
-<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
 <p>Dedicated care and regular visits for elderly parents.</p>
 </div>
-
 <div class="card">
-<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
 <p>Property inspections and maintenance supervision.</p>
 </div>
-
 <div class="card">
-<img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54">
 <p>Reliable hospital and appointment assistance.</p>
 </div>
-
 </div>
+</section>
 
-</div>
-
-
-<div class="testimonials" id="testimonials">
-
+<section class="testimonials" id="testimonials">
 <h2>What Families Say</h2>
-
 <div class="container cards">
-
 <div class="testimonial">
-<p>"TrustCare Global gave us peace of mind while living abroad. Their updates and care for our parents were excellent."</p>
-<b>– NRI Family, UAE</b>
+<p>"TrustCare Global gave us peace of mind while living abroad."</p>
+<b>– NRI Client, UAE</b>
 </div>
-
 <div class="testimonial">
-<p>"Very reliable service. The team helped with hospital visits and property maintenance."</p>
+<p>"Very reliable and professional support."</p>
 <b>– NRI Client, UK</b>
 </div>
-
 <div class="testimonial">
-<p>"Professional, trustworthy, and responsive. Highly recommended."</p>
+<p>"Highly recommended for families abroad."</p>
 <b>– NRI Client, Canada</b>
 </div>
-
 </div>
+</section>
 
+<section class="coverage" id="coverage">
+<h2>Our Service Coverage</h2>
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Kerala+Tamil+Nadu&output=embed"
+width="100%" height="400" style="border:0;"></iframe>
 </div>
+</section>
 
+<section class="booking" id="booking">
+<h2>Request a Service</h2>
+<form class="form">
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Country where you live">
+<input type="text" placeholder="Parent location in India">
+<select>
+<option>Select Service Plan</option>
+<option>Silver Plan</option>
+<option>Gold Plan</option>
+<option>Platinum Plan</option>
+</select>
+<textarea placeholder="Describe your support needs"></textarea>
+<button type="submit">Submit Request</button>
+</form>
+</section>
 
 <div class="contact" id="contact">
-
 <h2>Contact Us</h2>
-
 <p><b>Office Address</b></p>
 <p>52, Saibaba Colony, Coimbatore – 641027, Tamil Nadu, India</p>
-
 <p><b>Phone / WhatsApp</b></p>
 <p>+91 8072 728 749</p>
-
 <p><b>Email</b></p>
 <p>info@trustcareglobal.com</p>
-
 </div>
 
-
 <footer>
-
 © 2026 TrustCare Global | Global Family & Property Support
-
 </footer>
 
-
-<a href="https://wa.me/918072728749" class="whatsapp">WhatsApp</a>
+<a href="https://wa.me/918072728749" class="whatsapp">💬 Chat on WhatsApp</a>
 
 </body>
 </html>
+```
