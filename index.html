@@ -18,82 +18,95 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f6f9;
+background:#f5f7fb;
 color:#333;
 }
 
+/* HEADER */
+
 header{
-background:linear-gradient(135deg,#004aad,#007bff);
+background:#004aad;
 color:white;
-padding:60px 20px;
+padding:20px;
 text-align:center;
 }
 
 .logo{
-font-size:40px;
+font-size:34px;
 font-weight:600;
-letter-spacing:1px;
 animation:glow 2s infinite alternate;
 }
 
 @keyframes glow{
-from{ text-shadow:0 0 10px #fff;}
-to{ text-shadow:0 0 25px #ffd700;}
+from{ text-shadow:0 0 5px white;}
+to{ text-shadow:0 0 20px gold;}
 }
 
-.tagline{
-margin-top:10px;
-font-size:18px;
-opacity:0.95;
+/* HERO */
+
+.hero{
+position:relative;
+height:450px;
+overflow:hidden;
 }
+
+.hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-text{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+color:white;
+background:rgba(0,0,0,0.5);
+padding:40px;
+border-radius:10px;
+}
+
+.hero-text h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* NAV */
 
 nav{
 background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-position:sticky;
-top:0;
-z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav a{
-padding:15px 20px;
-cursor:pointer;
-font-weight:500;
-color:#333;
+padding:15px 25px;
 text-decoration:none;
-transition:0.3s;
+color:#333;
+font-weight:500;
 }
 
 nav a:hover{
 color:#007bff;
 }
 
-nav a.active{
-border-bottom:3px solid #007bff;
-color:#007bff;
-}
+/* CONTAINER */
 
 .container{
 max-width:1100px;
 margin:auto;
-padding:40px 20px;
+padding:50px 20px;
 }
 
-.section{
-display:none;
-animation:fade 0.6s;
-}
-
-@keyframes fade{
-from{opacity:0;}
-to{opacity:1;}
-}
+/* SECTION */
 
 h2{
-margin-bottom:15px;
+text-align:center;
+margin-bottom:30px;
 color:#004aad;
 }
 
@@ -102,55 +115,96 @@ line-height:1.6;
 margin-bottom:15px;
 }
 
-ul{
-margin-left:20px;
-line-height:1.8;
-}
+/* CARDS */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
-margin-top:20px;
 }
 
 .card{
 background:white;
-padding:25px;
 border-radius:10px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+padding:25px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:160px;
+object-fit:cover;
+border-radius:8px;
+margin-bottom:15px;
 }
 
 .price{
 font-size:22px;
-font-weight:600;
 color:#007bff;
-margin-bottom:10px;
+margin:10px 0;
+font-weight:600;
 }
 
 .highlight{
 border:2px solid #007bff;
 }
 
-.contact-box{
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 6px 20px rgba(0,0,0,0.08);
+/* TRUST */
+
+.trust{
+background:#eef3ff;
+padding:60px 20px;
 }
 
-footer{
-text-align:center;
-padding:25px;
-background:#1c1c1c;
+/* TESTIMONIAL */
+
+.testimonials{
+background:white;
+padding:60px 20px;
+}
+
+.testimonial{
+background:#f7f7f7;
+padding:20px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+.contact{
+background:#004aad;
 color:white;
-margin-top:40px;
-font-size:14px;
+padding:50px 20px;
+text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
 </style>
@@ -161,77 +215,59 @@ font-size:14px;
 <header>
 
 <div class="logo">TrustCare Global</div>
-
-<div class="tagline">
-Caring for your loved ones and property in Kerala and Tamil Nadu, even when you are far away
-</div>
+<p>Caring for your loved ones and property in Kerala & Tamil Nadu</p>
 
 </header>
 
+
+<section class="hero">
+
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+
+<div class="hero-text">
+<h1>Peace of Mind for Families Abroad</h1>
+<p>Reliable support for elderly parents, homes, and daily responsibilities.</p>
+</div>
+
+</section>
+
+
 <nav>
 
-<a onclick="showSection('about',this)">Peace of Mind</a>
-<a onclick="showSection('how',this)">How It Works</a>
-<a onclick="showSection('plans',this)">Care Plans</a>
-<a onclick="showSection('services',this)">Additional Services</a>
-<a onclick="showSection('safety',this)">Safety & Trust</a>
-<a onclick="showSection('contact',this)">Contact</a>
+<a href="#about">About</a>
+<a href="#plans">Care Plans</a>
+<a href="#services">Services</a>
+<a href="#trust">Why Trust Us</a>
+<a href="#testimonials">Testimonials</a>
+<a href="#contact">Contact</a>
 
 </nav>
 
-<div class="container">
 
-<div id="about" class="section">
+<div class="container" id="about">
 
 <h2>Peace of Mind for Families Abroad</h2>
 
 <p>
-You care deeply about your parents and loved ones. But distance can make it difficult to support them with everyday needs.
+TrustCare Global bridges the gap for families living abroad by providing reliable support services for elderly parents and property in Kerala and Tamil Nadu.
 </p>
 
 <p>
-<b>TrustCare Global</b> bridges that gap by providing reliable family and property support services across Kerala and Tamil Nadu.
-</p>
-
-<p>
-Our trusted local team assists elderly parents with daily tasks, errands, appointments, and home supervision so they can live independently and safely.
-</p>
-
-<p>
-For families abroad, this means complete peace of mind knowing that a dependable support team is always there for your loved ones.
+Our trusted local team assists with everyday needs such as groceries, hospital visits, bill payments, property inspections, and more.
 </p>
 
 </div>
 
 
-<div id="how" class="section">
-
-<h2>How Our Service Works</h2>
-
-<ul>
-
-<li><b>Choose a Plan</b> – Select Silver, Gold, or Platinum based on your family's needs.</li>
-
-<li><b>Personalized Setup</b> – We understand your parents’ requirements and create a customized support plan.</li>
-
-<li><b>Regular Visits</b> – Our service executives assist with errands, groceries, hospital visits, and property checks.</li>
-
-<li><b>Updates & Transparency</b> – After every visit, families receive photos and reports.</li>
-
-<li><b>Ongoing Support</b> – Additional assistance and emergency services available anytime.</li>
-
-</ul>
-
-</div>
-
-
-<div id="plans" class="section">
+<div class="container" id="plans">
 
 <h2>Our Care Plans</h2>
 
 <div class="cards">
 
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
 
 <h3>Silver Plan</h3>
 
@@ -242,12 +278,15 @@ For families abroad, this means complete peace of mind knowing that a dependable
 <li>Property inspection</li>
 <li>Utility bill assistance</li>
 <li>Monthly groceries & medicine</li>
-<li>Photo report sent to family</li>
+<li>Photo report to family</li>
 </ul>
 
 </div>
 
+
 <div class="card highlight">
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e">
 
 <h3>Gold Plan</h3>
 
@@ -265,7 +304,10 @@ For families abroad, this means complete peace of mind knowing that a dependable
 
 </div>
 
+
 <div class="card">
+
+<img src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c">
 
 <h3>Platinum Plan</h3>
 
@@ -292,68 +334,73 @@ For families abroad, this means complete peace of mind knowing that a dependable
 </div>
 
 
-<div id="services" class="section">
+<div class="trust" id="trust">
 
-<h2>Additional Services</h2>
+<h2>Why Families Trust Us</h2>
 
-<ul>
+<div class="container cards">
 
-<li>Airport pickup and drop</li>
-<li>Wedding or event assistance</li>
-<li>International courier support</li>
-<li>House cleaning before NRI visits</li>
-<li>Government office or bank assistance</li>
-<li>Property supervision and maintenance</li>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<p>Dedicated care and regular visits for elderly parents.</p>
+</div>
 
-</ul>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
+<p>Property inspections and maintenance supervision.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54">
+<p>Reliable hospital and appointment assistance.</p>
+</div>
+
+</div>
 
 </div>
 
 
-<div id="safety" class="section">
+<div class="testimonials" id="testimonials">
 
-<h2>Safety & Trust</h2>
+<h2>What Families Say</h2>
 
-<ul>
+<div class="container cards">
 
-<li>All staff undergo strict background verification</li>
-<li>Identity verification and criminal record checks</li>
-<li>Professional trained service executives</li>
-<li>Uniform and official company identification</li>
-<li>Scheduled visits with digital service logs</li>
-<li>Photos and reports sent to families</li>
-<li>Emergency alerts and priority support</li>
+<div class="testimonial">
+<p>"TrustCare Global gave us peace of mind while living abroad. Their updates and care for our parents were excellent."</p>
+<b>– NRI Family, UAE</b>
+</div>
 
-</ul>
+<div class="testimonial">
+<p>"Very reliable service. The team helped with hospital visits and property maintenance."</p>
+<b>– NRI Client, UK</b>
+</div>
+
+<div class="testimonial">
+<p>"Professional, trustworthy, and responsive. Highly recommended."</p>
+<b>– NRI Client, Canada</b>
+</div>
+
+</div>
 
 </div>
 
 
-<div id="contact" class="section">
-
-<div class="contact-box">
+<div class="contact" id="contact">
 
 <h2>Contact Us</h2>
 
-<p><b>Office Address</b><br>
-52, Saibaba Colony<br>
-Coimbatore – 641027<br>
-Tamil Nadu, India
-</p>
+<p><b>Office Address</b></p>
+<p>52, Saibaba Colony, Coimbatore – 641027, Tamil Nadu, India</p>
 
-<p><b>Phone / WhatsApp</b><br>
-+91 8072 728 749
-</p>
+<p><b>Phone / WhatsApp</b></p>
+<p>+91 8072 728 749</p>
 
-<p><b>Email</b><br>
-info@trustcareglobal.com
-</p>
+<p><b>Email</b></p>
+<p>info@trustcareglobal.com</p>
 
 </div>
 
-</div>
-
-</div>
 
 <footer>
 
@@ -361,26 +408,8 @@ info@trustcareglobal.com
 
 </footer>
 
-<script>
 
-function showSection(id,element){
-
-let sections=document.querySelectorAll('.section');
-sections.forEach(sec=>sec.style.display='none');
-
-let links=document.querySelectorAll('nav a');
-links.forEach(link=>link.classList.remove('active'));
-
-document.getElementById(id).style.display='block';
-element.classList.add('active');
-
-}
-
-document.addEventListener("DOMContentLoaded",function(){
-showSection('about',document.querySelector('nav a'));
-});
-
-</script>
+<a href="https://wa.me/918072728749" class="whatsapp">WhatsApp</a>
 
 </body>
 </html>
