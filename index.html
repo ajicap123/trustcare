@@ -3,241 +3,382 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TrustCare Global – Family & Property Support</title>
+
+<title>TrustCare Global | Family & Property Support</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
-    scroll-behavior: smooth;
-  }
 
-  /* Header */
-  header {
-    background-color: #005bb5;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2rem;
-  }
-  header p {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-  }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-  /* Blinking highlight for brand name */
-  .blink-highlight {
-    color: #ffd700; /* gold highlight */
-    font-weight: bold;
-    animation: blink 1s infinite;
-  }
+body{
+background:#f4f6f9;
+color:#333;
+}
 
-  @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-  }
+header{
+background:linear-gradient(135deg,#004aad,#007bff);
+color:white;
+padding:60px 20px;
+text-align:center;
+}
 
-  /* Navbar / Tabs */
-  nav {
-    position: sticky;
-    top: 0;
-    background-color: #0073e6;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    z-index: 1000;
-  }
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0.5rem 1rem;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-  }
-  nav a.active {
-    color: #ffd700;
-    border-bottom: 2px solid #ffd700;
-  }
+.logo{
+font-size:40px;
+font-weight:600;
+letter-spacing:1px;
+animation:glow 2s infinite alternate;
+}
 
-  .container {
-    max-width: 1000px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-  }
+@keyframes glow{
+from{ text-shadow:0 0 10px #fff;}
+to{ text-shadow:0 0 25px #ffd700;}
+}
 
-  .tab-content {
-    display: none;
-    background-color: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  .tab-content h2 {
-    color: #0073e6;
-  }
-  .tab-content p, .tab-content ul, .tab-content ol {
-    margin: 0.5rem 0;
-    line-height: 1.5;
-  }
-  .tab-content ul {
-    padding-left: 1.2rem;
-  }
+.tagline{
+margin-top:10px;
+font-size:18px;
+opacity:0.95;
+}
 
-  .addon {
-    background-color: #e0f0ff;
-  }
+nav{
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-  footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
+nav a{
+padding:15px 20px;
+cursor:pointer;
+font-weight:500;
+color:#333;
+text-decoration:none;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#007bff;
+}
+
+nav a.active{
+border-bottom:3px solid #007bff;
+color:#007bff;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 20px;
+}
+
+.section{
+display:none;
+animation:fade 0.6s;
+}
+
+@keyframes fade{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+h2{
+margin-bottom:15px;
+color:#004aad;
+}
+
+p{
+line-height:1.6;
+margin-bottom:15px;
+}
+
+ul{
+margin-left:20px;
+line-height:1.8;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:20px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.price{
+font-size:22px;
+font-weight:600;
+color:#007bff;
+margin-bottom:10px;
+}
+
+.highlight{
+border:2px solid #007bff;
+}
+
+.contact-box{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 6px 20px rgba(0,0,0,0.08);
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#1c1c1c;
+color:white;
+margin-top:40px;
+font-size:14px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-  <h1><span class="blink-highlight">TrustCare Global</span> – Family & Property Support</h1>
-  <p>Caring for your loved ones and property in Kerala and Tamil Nadu, even when you are far away.</p>
+
+<div class="logo">TrustCare Global</div>
+
+<div class="tagline">
+Caring for your loved ones and property in Kerala and Tamil Nadu, even when you are far away
+</div>
+
 </header>
 
-<!-- Navigation Tabs -->
 <nav>
-  <a onclick="showTab('about', this)">Peace of Mind</a>
-  <a onclick="showTab('how', this)">How It Works</a>
-  <a onclick="showTab('plans', this)">Care Plans</a>
-  <a onclick="showTab('additional', this)">Additional Services</a>
-  <a onclick="showTab('safety', this)">Safety & Trust</a>
-  <a onclick="showTab('contact', this)">Contact Us</a>
+
+<a onclick="showSection('about',this)">Peace of Mind</a>
+<a onclick="showSection('how',this)">How It Works</a>
+<a onclick="showSection('plans',this)">Care Plans</a>
+<a onclick="showSection('services',this)">Additional Services</a>
+<a onclick="showSection('safety',this)">Safety & Trust</a>
+<a onclick="showSection('contact',this)">Contact</a>
+
 </nav>
 
 <div class="container">
-  <!-- About Us / Purpose -->
-  <div class="tab-content" id="about">
-    <h2>Peace of Mind for Families Abroad</h2>
-    <p>You care deeply about your parents and loved ones. But distance can make it difficult to support them with everyday needs.</p>
-    <p>TrustCare Global bridges that gap. We provide reliable family and property support services in Kerala and Tamil Nadu, coordinated by you and delivered by our trusted local team.</p>
-    <p>Our services empower older parents to live more independently by assisting with daily tasks, errands, and appointments—reducing their reliance on neighbours or friends for basic support.</p>
-    <p>For families living abroad, TrustCare Global offers true peace of mind. You have a dependable team on the ground—ready to support your loved ones with care, respect, and reliability whenever it’s needed.</p>
-  </div>
 
-  <!-- How It Works -->
-  <div class="tab-content" id="how">
-    <h2>What We Do & How It Works</h2>
-    <p>TrustCare Global provides dependable support for elderly parents, homes, and everyday responsibilities in Kerala and Tamil Nadu for families living abroad. Our goal is to ensure your loved ones receive the care and assistance they need while giving you complete peace of mind.</p>
-    <ol>
-      <li><strong>Choose a Plan:</strong> Select a service plan that fits your family’s needs—Silver, Gold, or Platinum.</li>
-      <li><strong>Personalized Setup:</strong> Our team connects with you to understand your parents’ needs and home requirements, then creates a personalized support plan.</li>
-      <li><strong>Regular Visits & Assistance:</strong> Trained service executives visit your parents and property, assisting with errands, bills, groceries, hospital visits, and other needs.</li>
-      <li><strong>Updates & Transparency:</strong> After every visit, we provide updates, photos, and reports so you always know how your loved ones are doing.</li>
-      <li><strong>Ongoing Support:</strong> Our team is available for additional help whenever needed, including emergencies, property maintenance, and special requests.</li>
-    </ol>
-  </div>
+<div id="about" class="section">
 
-  <!-- Care Plans -->
-  <div class="tab-content" id="plans">
-    <h2>Our Care Plans</h2>
+<h2>Peace of Mind for Families Abroad</h2>
 
-    <h3>Silver Plan – ₹5,000 / Month</h3>
-    <ul>
-      <li>Monthly visit to parents and home for care, safety, and condition check</li>
-      <li>Property inspection and status update</li>
-      <li>Assistance with paying utility bills</li>
-      <li>Monthly grocery and medicine purchase</li>
-      <li>Photo and service report sent to family</li>
-    </ul>
+<p>
+You care deeply about your parents and loved ones. But distance can make it difficult to support them with everyday needs.
+</p>
 
-    <h3>Gold Plan – ₹20,000 / Month</h3>
-    <ul>
-      <li>Weekly visit to parents and home for care, safety, and condition check</li>
-      <li>Weekly grocery and medicine purchase</li>
-      <li>Assistance with hospital appointments</li>
-      <li>Up to 4 transport and assistance services per month</li>
-      <li>Regular updates with photos and service reports</li>
-    </ul>
+<p>
+<b>TrustCare Global</b> bridges that gap by providing reliable family and property support services across Kerala and Tamil Nadu.
+</p>
 
-    <h3>Platinum Plan – ₹40,000 / Month</h3>
-    <ul>
-      <li>Weekly visit to parents, home, and property for care and safety checks</li>
-      <li>Weekly grocery and medicine purchase</li>
-      <li>Assistance with hospital appointments</li>
-      <li>Up to 4 transport and assistance services per month</li>
-      <li>Passport or visa appointment assistance</li>
-      <li>Property repair and maintenance coordination</li>
-      <li>Arranging driver, taxi, or transport when required</li>
-      <li>24/7 emergency support</li>
-      <li>Priority service and detailed updates</li>
-    </ul>
-  </div>
+<p>
+Our trusted local team assists elderly parents with daily tasks, errands, appointments, and home supervision so they can live independently and safely.
+</p>
 
-  <!-- Additional Services -->
-  <div class="tab-content addon" id="additional">
-    <h2>Additional Services (On-Demand)</h2>
-    <ul>
-      <li>Airport pickup and drop</li>
-      <li>Wedding or event assistance</li>
-      <li>International courier support</li>
-      <li>House cleaning before NRI visits</li>
-      <li>Government office or bank assistance</li>
-      <li>Property maintenance and supervision</li>
-    </ul>
-  </div>
+<p>
+For families abroad, this means complete peace of mind knowing that a dependable support team is always there for your loved ones.
+</p>
 
-  <!-- Safety & Trust -->
-  <div class="tab-content" id="safety">
-    <h2>Safety & Trust</h2>
-    <p>At TrustCare Global, your loved ones’ safety is our top priority:</p>
-    <ul>
-      <li>Every team member undergoes strict background checks, including identity verification, criminal record screening, and reference verification.</li>
-      <li>Service executives are trained professionals selected for reliability, empathy, and integrity.</li>
-      <li>They carry company-issued ID, wear identifiable uniforms, and follow strict service protocols during every visit.</li>
-      <li>Visits are pre-scheduled, digitally logged, and monitored, ensuring transparency and accountability.</li>
-      <li>Families receive regular updates with photos and reports, and our operations team supervises services to maintain consistent quality.</li>
-      <li>Immediate alerts are sent to families if any concerns arise, ensuring 24/7 peace of mind.</li>
-    </ul>
-  </div>
+</div>
 
-  <!-- Contact Us -->
-  <div class="tab-content" id="contact">
-    <h2>Contact Us</h2>
-    <p><strong>Office Address:</strong><br>
-      52, Saibaba Colony, Coimbatore – 641027, Tamil Nadu, India</p>
-    <p><strong>Phone / WhatsApp:</strong><br>
-      <a href="tel:+918072728749">+91 8072 728 749</a></p>
-    <p><strong>Email:</strong><br>
-      <a href="mailto:info@trustcareglobal.com">info@trustcareglobal.com</a></p>
-  </div>
+
+<div id="how" class="section">
+
+<h2>How Our Service Works</h2>
+
+<ul>
+
+<li><b>Choose a Plan</b> – Select Silver, Gold, or Platinum based on your family's needs.</li>
+
+<li><b>Personalized Setup</b> – We understand your parents’ requirements and create a customized support plan.</li>
+
+<li><b>Regular Visits</b> – Our service executives assist with errands, groceries, hospital visits, and property checks.</li>
+
+<li><b>Updates & Transparency</b> – After every visit, families receive photos and reports.</li>
+
+<li><b>Ongoing Support</b> – Additional assistance and emergency services available anytime.</li>
+
+</ul>
+
+</div>
+
+
+<div id="plans" class="section">
+
+<h2>Our Care Plans</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Silver Plan</h3>
+
+<div class="price">₹5,000 / Month</div>
+
+<ul>
+<li>Monthly visit to parents and home</li>
+<li>Property inspection</li>
+<li>Utility bill assistance</li>
+<li>Monthly groceries & medicine</li>
+<li>Photo report to family</li>
+</ul>
+
+</div>
+
+<div class="card highlight">
+
+<h3>Gold Plan</h3>
+
+<div class="price">₹20,000 / Month</div>
+
+<ul>
+<li>Weekly visit to parents</li>
+<li>Weekly groceries & medicines</li>
+<li>Hospital appointment assistance</li>
+<li>4 transport services per month</li>
+<li>Weekly service updates</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>Platinum Plan</h3>
+
+<div class="price">₹40,000 / Month</div>
+
+<ul>
+<li>Weekly home & property visits</li>
+<li>Hospital appointment support</li>
+<li>Passport / visa appointment help</li>
+<li>Property repair coordination</li>
+<li>Driver / taxi arrangements</li>
+<li>24/7 emergency support</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div id="services" class="section">
+
+<h2>Additional Services</h2>
+
+<ul>
+
+<li>Airport pickup and drop</li>
+<li>Wedding or event assistance</li>
+<li>International courier support</li>
+<li>House cleaning before NRI visits</li>
+<li>Government office or bank assistance</li>
+<li>Property supervision and maintenance</li>
+
+</ul>
+
+</div>
+
+
+<div id="safety" class="section">
+
+<h2>Safety & Trust</h2>
+
+<ul>
+
+<li>All staff undergo strict background verification</li>
+
+<li>Identity verification and criminal record checks</li>
+
+<li>Professional service executives with training</li>
+
+<li>Uniform and official company identification</li>
+
+<li>Scheduled visits with digital service logs</li>
+
+<li>Photos and reports sent to families</li>
+
+<li>Emergency alerts and priority support</li>
+
+</ul>
+
+</div>
+
+
+<div id="contact" class="section">
+
+<div class="contact-box">
+
+<h2>Contact Us</h2>
+
+<p><b>Office Address</b><br>
+52, Saibaba Colony<br>
+Coimbatore – 641027<br>
+Tamil Nadu, India
+</p>
+
+<p><b>Phone / WhatsApp</b><br>
++91 8072 728 749
+</p>
+
+<p><b>Email</b><br>
+info@trustcareglobal.com
+</p>
+
+</div>
+
+</div>
+
 </div>
 
 <footer>
-  &copy; 2026 TrustCare Global - Family & Property Support
+
+© 2026 TrustCare Global | Global Family & Property Support
+
 </footer>
 
 <script>
-  function showTab(tabId, element) {
-    const tabs = document.querySelectorAll('.tab-content');
-    tabs.forEach(tab => tab.style.display = 'none');
 
-    const links = document.querySelectorAll('nav a');
-    links.forEach(link => link.classList.remove('active'));
+function showSection(id,element){
 
-    document.getElementById(tabId).style.display = 'block';
-    element.classList.add('active');
-  }
+let sections=document.querySelectorAll('.section');
+sections.forEach(sec=>sec.style.display='none');
 
-  // Show first tab by default
-  document.addEventListener('DOMContentLoaded', () => {
-    showTab('about', document.querySelector('nav a'));
-  });
+let links=document.querySelectorAll('nav a');
+links.forEach(link=>link.classList.remove('active'));
+
+document.getElementById(id).style.display='block';
+element.classList.add('active');
+
+}
+
+document.addEventListener("DOMContentLoaded",function(){
+showSection('about',document.querySelector('nav a'));
+});
+
 </script>
 
 </body>
